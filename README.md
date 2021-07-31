@@ -42,4 +42,4 @@ I've used `crontab` for scheduling the script to run at 00:00 every day. To do t
   - The portion `/logfolder/output.log 2>&1` allows you to pipe all of the logs to some output file of your choice. This is especially useful if you do not already have an MTE set up for mailing output to you.
 
 ## System
-Run with Python 3.9.5 on Ubuntu 21.04
+Developed with Python 3.9.5 on Ubuntu 21.04
