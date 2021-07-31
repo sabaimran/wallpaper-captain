@@ -13,7 +13,7 @@ Before running the script, you must set the relevant environment variable which 
 
 - If you want to set the environment variable for the lifetime of the terminal, you can use this command inside the terminal you will use to run the script: `export WALLPAPER_CAPTAIN_FOLDER=/path/to/wallpapers/folder/`
 
-- If you want to have the environment variable persiste across sessions, you can update `~/.bashrc` with the same line above. This will come in use if you plan to regularly use the script, a scenario I'll describe below.
+- If you want to have the environment variable persist across sessions, you can update `~/.bashrc` with the same line above, or use some other mechanism for setting environment variables with a longer lifecycle.
 
 ## Run
 To run, simply execute the below command:
