@@ -6,7 +6,8 @@ echo "starting: $(date)"
 # Replace with path to your wallpapers folder
 export WALLPAPER_CAPTAIN_FOLDER=/path/to/your/wallpapers/
 
-# Update the DBUS_SESSION_BUS_ADDRESS environment variable. Solution found on StackOverflow, but not able to find original link.
+# Update the DBUS_SESSION_BUS_ADDRESS environment variable. Solution found on StackOverflow, but I am not able to find the original link :(.
+# This is required to allow the terminal from which the cronjob runs to have access to the DBUS_SESSION_BUS_ADDRESS environment variable. Without it, it's not able to save the new wallpaper to this display. If you run the python script from a regular terminal, this environment variable will already be appropriately set. The differential arises from the cronjob terminal using a more minimal set of environment variables.
 user=$(whoami)
 
 fl=$(find /proc -maxdepth 2 -user $user -name environ -print -quit)
