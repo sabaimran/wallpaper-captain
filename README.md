@@ -1,5 +1,5 @@
 # Wallpaper Captain!
-I want to use wallpapers that mean something to me. At first iteration, I'll set the wallpaper to a random picture from a folder in which I keep photos from various occasions in my life. Each random photo allows me to think back to a different time, state, or place I was in, and to be serendipitously reminded of its beauty.
+I want to use wallpapers that mean something to me. At first iteration, I'll set the wallpaper to a random picture from a folder in which I keep photos from various occasions in my life. Each random photo allows me to think back to a different time, state, or place I was in, and to serendipitously live the joy of that moment again.
 
 Over time, I would like to increase the complexity of how the next wallpaper is decided, but this would suffice for now :). For any comments, problems, or suggestions, please peruse the [Issues](https://github.com/sabaimran/wallpaper-captain/issues), which I will monitor actively.
 
@@ -10,14 +10,16 @@ Checkout using `git checkout https://github.com/sabaimran/wallpaper-captain.git`
 ## Prerequisites
 
 ### Photos
-Assemble a photo album on your machine, comprised of photos you'd like to use as the source for your wallpapers.
+Assemble a directory of photos on your machine, comprised of photos you'd like to use as the source for your wallpapers. You can add and remove as you'd like, without consequence to the script execution. However, you should ensure that your photos are of type `.jpeg`, `.jpg`, `.png`, or some other image type which can be used for wallpaper settings. 
+
+Do you need ideas of which photos to use? I have used many photos from my travels, ventures into nature, scenes around places I've lived. Try to use photos that elicit positive feelings from you, no matter the time of day, week, month, or year! Goats 🐐️, strelitzia 🥀️, the Bukingham Fountain ⛲️, Mount Rainier 🏔️.
 
 ## Manual Execution
 
 These steps are pertinent for users who want to trigger the script manually, or run it within the normal terminal environment.
 
 ### Environment
-Assuming you have Python installed already, you can follow the below procedures. Note that these instructions pertain to triggers from the normal terminal environment. You can refer to [this article](https://devconnected.com/set-environment-variable-bash-how-to/) for more details on environment variables in Ubuntu. For scheduling instructions, you can look below.
+These instructions pertain to those who want to trigger the script from the normal terminal environment. You can refer to [this article](https://devconnected.com/set-environment-variable-bash-how-to/) for more details on environment variables in Ubuntu. For scheduling instructions, you can refer to [the scheduling section](https://github.com/sabaimran/wallpaper-captain#scheduling).
 
 Before running the script, you must set the relevant environment variable which indicates to the script where the folder of the wallpapers you created in the step prior lives. Below are two methods highlighted to accomplishing this, if you're new to environment variables:
 
@@ -26,6 +28,8 @@ Before running the script, you must set the relevant environment variable which 
 
 - Add `export WALLPAPER_CAPTAIN_FOLDER=/path/to/wallpapers/folder/` to `~/.bashrc`, then run `source ~/.bashrc` to import those environment variables.
   - If you want to have the environment variable persist across sessions, you can update `~/.bashrc` with the same line above, or use some other mechanism for setting environment variables with a longer lifecycle.
+
+Of course, you can also modify the python script to hardcode the path to your wallpapers folder! I like the use of environment variables because they make the code a bit neater, and allow me to publish the source without worries of privacy.
 
 ### Run
 To run, execute the below command.
@@ -39,7 +43,7 @@ I've used `crontab` for scheduling the script to run at 00:00 every day. To do t
 
 1. Use `sample-update.sh` to refer to an example script. Make the relevant edits to reference the correct files.
 2. Run `chmod +x sample-update.sh` to allow it to be run as an executable shell script.
-3. From your terminal, type in `crontab -e` to open the crontab for your user profile.
+3. Run `crontab -e` to open the crontab for your user profile.
 4. Set up the entry with `0 0 * * * /path/to/update/script/sample-update.sh >> /logfolder/output.log 2>&1`. 
     - Replace `/path/to/update/script/sample-update.sh` to point to the shell script on your machine.
     - You can also replace the `0 0 * * *` with `@daily`. They are equivalent in definition.
