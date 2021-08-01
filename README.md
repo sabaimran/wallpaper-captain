@@ -15,7 +15,7 @@ Assemble a photo album on your machine, comprised of photos you'd like to use as
 These steps are pertinent for users who want to trigger the script manually, or run it within the normal terminal environment.
 
 ### Environment
-Assuming you have Python installed already, you can follow the below procedures. Note that these instructions pertain to triggers from the normal terminal environment. For scheduling instructions, you can look below.
+Assuming you have Python installed already, you can follow the below procedures. Note that these instructions pertain to triggers from the normal terminal environment. You can refer to [this article](https://devconnected.com/set-environment-variable-bash-how-to/) for more details on environment variables in Ubuntu. For scheduling instructions, you can look below.
 
 Before running the script, you must set the relevant environment variable which indicates to the script where the folder of the wallpapers you created in the step prior lives. Below are two methods highlighted to accomplishing this, if you're new to environment variables:
 
