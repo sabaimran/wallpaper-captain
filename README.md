@@ -38,10 +38,12 @@ These steps are pertinent to those who want to schedule the script execution aut
 I've used `crontab` for scheduling the script to run at 00:00 every day. To do this, we'll need to prepare a shell script that calls into our `python` script. Refer to [this documentation](https://help.ubuntu.com/community/CronHowto) to learn more about crontab.
 
 1. Use `sample-update.sh` to refer to an example script. Make the relevant edits to reference the correct files.
-2. Type in `crontab -e` to open the crontab for your user profile.
-3. Set up the entry with `0 0 * * * /path/to/update/script/sample-update.sh >> /logfolder/output.log 2>&1`, replacing the path with the path to this repo on your machine.
+2. Run `chmod +x sample-update.sh` to allow it to be run as an executable shell script.
+3. From your terminal, type in `crontab -e` to open the crontab for your user profile.
+4. Set up the entry with `0 0 * * * /path/to/update/script/sample-update.sh >> /logfolder/output.log 2>&1`. 
+    - Replace `/path/to/update/script/sample-update.sh` to point to the shell script on your machine.
     - You can also replace the `0 0 * * *` with `@daily`. They are equivalent in definition.
-    - The portion `/logfolder/output.log 2>&1` allows you to pipe all of the logs to some output file of your choice. This is especially useful if you do not already have an MTE set up for mailing output to you.
+    - The portion `>> /logfolder/output.log 2>&1` allows you to pipe all of the logs to some output file of your choice. This is especially useful if you do not already have an MTE set up for mailing output to you. Replace the path to point to some folder on your machine. This portion is optional.
 
 ## System
 Developed with Python 3.9.5 on Ubuntu 21.04
