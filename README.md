@@ -27,7 +27,7 @@ Before running the script, you must set the relevant environment variable which 
 
 ### Run
 To run, execute the below command.
-`python3 wallpaper-updater.py`
+```python3 wallpaper-updater.py```
 
 ## Scheduling
 
