@@ -1,6 +1,8 @@
 # Wallpaper Captain!
 I want to use wallpapers that mean something to me. At first iteration, I'll set the wallpaper to a random picture from a folder in which I keep photos from various occasions in my life. Each random photo allows me to think back to a different time, state, or place I was in, and to be serendipitously reminded of its beauty.
 
+Over time, I would like to increase the complexity of how the next wallpaper is decided, but this would suffice for now :). For any comments, problems, or suggestions, please peruse the [Issues](https://github.com/sabaimran/wallpaper-captain/issues), which I will monitor actively.
+
 ## Checkout
 
 Checkout using `git checkout https://github.com/sabaimran/wallpaper-captain.git`.
