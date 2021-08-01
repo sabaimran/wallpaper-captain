@@ -31,8 +31,7 @@ Before running the script, you must set the relevant environment variable which 
 Of course, you can also modify the python script to hardcode the path to your wallpapers folder! I like the use of environment variables because they make the code a bit neater, and allow me to publish the source without worries of privacy.
 
 ### Run
-To run, execute the below command.
-```python3 wallpaper-updater.py```
+To run, execute the command: `python3 wallpaper-updater.py`
 
 ## Scheduling
 
