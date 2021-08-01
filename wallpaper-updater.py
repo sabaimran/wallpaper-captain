@@ -1,6 +1,6 @@
 import os
 from random import randrange
-from os.path import isfile, join
+from os.path import join
 
 # This indicates where the images used for the wallpaper are stored.
 wallpaper_folder_path = os.environ['WALLPAPER_CAPTAIN_FOLDER']
