@@ -16,10 +16,9 @@ Do you need ideas of which photos to use? I have used many photos from my travel
 
 ## Manual Execution
 
-These steps are pertinent for users who want to trigger the script manually, or run it within the normal terminal environment.
+These instructions pertain to those who want to trigger the script from the normal terminal environment. You can refer to [this article](https://devconnected.com/set-environment-variable-bash-how-to/) for more details on environment variables in Ubuntu. For scheduling instructions, you can refer to [the scheduling section](https://github.com/sabaimran/wallpaper-captain#scheduling).
 
 ### Environment
-These instructions pertain to those who want to trigger the script from the normal terminal environment. You can refer to [this article](https://devconnected.com/set-environment-variable-bash-how-to/) for more details on environment variables in Ubuntu. For scheduling instructions, you can refer to [the scheduling section](https://github.com/sabaimran/wallpaper-captain#scheduling).
 
 Before running the script, you must set the relevant environment variable which indicates to the script where the folder of the wallpapers you created in the step prior lives. Below are two methods highlighted to accomplishing this, if you're new to environment variables:
 
