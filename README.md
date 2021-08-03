@@ -42,10 +42,11 @@ I've used `crontab` for scheduling the script to run at 00:00 every day. To do t
 1. Use `sample-update.sh` to refer to an example script. Make the relevant edits to reference the correct files.
 2. Run `chmod +x sample-update.sh` to allow it to be run as an executable shell script.
 3. Run `crontab -e` to open the crontab for your user profile.
-4. Set up the entry with `0 0 * * * /path/to/update/script/sample-update.sh >> /logfolder/output.log 2>&1`. 
+4. Set up the entry with `0 * * * * /path/to/update/script/sample-update.sh >> /logfolder/output.log 2>&1`. 
     - Replace `/path/to/update/script/sample-update.sh` to point to the shell script on your machine.
-    - You can also replace the `0 0 * * *` with `@daily`. They are equivalent in definition.
+    - You can also replace the `0 * * * *` with `@hourly`. They are equivalent in definition.
     - The portion `>> /logfolder/output.log 2>&1` allows you to pipe all of the logs to some output file of your choice. This is especially useful if you do not already have an MTE set up for mailing output to you. Replace the path to point to some folder on your machine. This portion is optional.
+    - We don't actually want the script to run hourly, but this allows us to have some guarantee that it will run at some point while we are using our machine, without executing it excessively. Refer to [sample-update.sh](https://github.com/sabaimran/wallpaper-captain/blob/master/sample-update.sh) for further implementation details.
 
 ## System
 Developed with Python 3.9.5 on Ubuntu 21.04
