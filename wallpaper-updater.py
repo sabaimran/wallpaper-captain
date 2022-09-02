@@ -9,7 +9,7 @@ def set_wallpaper(filepath: str):
     """
     Given a filepath to an image, sets the wallpaper to that image.
     """
-    os.system(f"gsettings set org.gnome.desktop.background picture-uri file:{filepath}")
+    os.system(f"gsettings set org.gnome.desktop.background picture-uri-dark file:{filepath}")
 
 def get_wallpaper_options():
     """
